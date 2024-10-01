@@ -6,7 +6,7 @@ function App() {
   const [sending, setSending] = useState(false);
   return (
     <div className="sm:mx-20 border p-4 rounded text-xl h-screen overflow-hidden">
-      <ul className="messages text-right text-white pb-10 h-screen overflow-y-scroll ">
+      <ul className="messages text-right text-white h-full overflow-y-scroll ">
         {msgs.map((msg, i) => (
           <li
             className="ml-auto block w-fit mb-2 bg-blue-400 rounded-full px-4"
@@ -30,7 +30,7 @@ function App() {
             setSending(false);
           }, 500);
         }}
-        className={`border mt-4 flex left-0 fixed bottom-2 w-full rounded-full ${
+        className={`border mt-4 flex left-4 right-4 fixed bottom-2 rounded-full ${
           sending && "-z-10"
         }`}
       >
